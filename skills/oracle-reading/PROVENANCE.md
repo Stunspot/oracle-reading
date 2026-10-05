@@ -10,3 +10,5 @@ The tarot picture collection uses unmodified 330px Wikimedia Commons thumbnails 
 
 Catalog associations are original contemporary commentary, not a commercial deck guidebook, modern I Ching translation or definitive ancient rune rite. Rune practice is modern Elder Futhark reflection. I Ching mapping is independently checked against Unicode figures; detailed line reading uses the chosen actual text. [Waite's Pictorial Key](https://sacred-texts.com/tarot/pkt/) and [Legge's Book of Changes](https://sacred-texts.com/ich/ic01.htm) inform vocabulary/order; no source passages from them are reproduced.
 
+
+The shared face-down card back, assets/card-back.jpg, is original artwork made with OpenAI built-in image generation on 2026-10-05. The generated raster was resized and JPEG-encoded to 330 × 570 for offline/inline display; no artwork was drawn by code. Its celestial pattern identifies a card back and conveys no hidden-card identity or orientation. Generation prompt is preserved in assets/card-back-source.md.

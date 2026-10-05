@@ -14,7 +14,11 @@ Copy the .zip from Additional Files to your chosen harness or Chat project, atta
 
 # Changelog
 
+Presentation edit, 2026-10-05: original Bloomfield LANTERN CONVERSATION Label. Included in Nova Free 3.8.0 and Nova Emergent 1.11.0; reading behavior remains 0.2.0.
+
 v0.2.0 - 2026-10-05
+
+Presentation repair: unrevealed tarot cards show a decorated card back while awaiting the AI’s reveal.
 
 The existing AI now conducts the reading and operates the accompanying visual table. Selene's performed expert consultation informs the operative practice. Added matching art for all 78 cards, four visual methods, staged reveal/focus, stable cast continuity, quiet/clear and self-contained inline/standalone display. Replaces the self-service studio; prior exported casts can be rendered.
 

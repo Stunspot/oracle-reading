@@ -110,6 +110,9 @@ def fragment(r,inline):
  display={k:[{a:x[a] for a in ('id','name','number','bits','glyph') if a in x} for x in oracle.CAT[k]] for k in ('tarot','runes','iching')}
  resources={'catalog':display,'images':{}}
  if r['phase']=='active' and r['tradition']=='tarot':
+  if any(x['id'] not in r['revealed'] for x in r['results']):
+   p=ROOT/'assets/card-back.jpg'
+   resources['cardBack']='data:image/jpeg;base64,'+base64.b64encode(p.read_bytes()).decode()
   for x in r['results']:
    if x['id'] in r['revealed']:
     p=ROOT/'assets/cards'/(x['id']+'.jpg')

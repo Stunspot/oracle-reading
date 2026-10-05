@@ -87,8 +87,15 @@ function render(root,raw,resources){
     el("figcaption","oracle-caption",symbol.name+(r.tradition==="tarot"?(item.reversed?" · reversed":" · upright"):""),fig);
     if(item.phrase)el("p","oracle-phrase",item.phrase,fig);
    }else{
-    const back=el("div","oracle-card oracle-unrevealed","",fig);
-    back.setAttribute("role","img");back.setAttribute("aria-label","Unrevealed symbol in "+item.position);
+    if(r.tradition==="tarot"&&resources.cardBack){
+     const back=el("img","oracle-card oracle-card-back",undefined,fig);
+     back.src=resources.cardBack;back.alt="Face-down card in "+item.position;
+     back.width=330;back.height=570;back.loading="eager";back.decoding="async";
+     back.addEventListener("error",()=>{back.remove();el("div","oracle-card oracle-name-only","Face-down card",fig);});
+    }else{
+     const back=el("div","oracle-card oracle-unrevealed",r.tradition==="tarot"?"Face-down card":"",fig);
+     back.setAttribute("role","img");back.setAttribute("aria-label","Unrevealed symbol in "+item.position);
+    }
    }
   }
  }else if(r.tradition==="iching"){
