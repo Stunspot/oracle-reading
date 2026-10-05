@@ -6,6 +6,5 @@ if errorlevel 1 (
  pause
  exit /b 1
 )
-start "" http://127.0.0.1:8765
-python -B serve.py
+python -B serve.py --open
 if errorlevel 1 pause

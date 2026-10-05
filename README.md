@@ -14,7 +14,7 @@ Download and extract the complete release ZIP. On Windows, double-click **Launch
 python serve.py
 ```
 
-Open **http://127.0.0.1:8765**. Use `python3` if that is your Python command. Native browser modules require this HTTP launch; opening index.html directly gives launch guidance. The studio has no external dependencies or model subscription and works without internet through its local server.
+Open the exact address printed in the terminal. The launcher opens it for you. The server prefers port 8765 and selects an available port when it is occupied. Use --port only when you want a specific port. Use `python3` if that is your Python command. Native browser modules require this HTTP launch; opening index.html directly gives launch guidance. The studio has no external dependencies or model subscription and works without internet through its local server.
 
 ## Give your assistant the skill
 
@@ -33,7 +33,7 @@ The studio provides original symbol commentary and reflection prompts. **Deepen 
 
 ## Private by choice
 
-Questions stay in the active page until you explicitly save them to this browser's journal. No account, analytics or cloud store. Exported files and AI briefs include the question and notes shown on screen; review them before sharing. Journal entries can be reopened, exported or deleted with undo. Browser storage can be unavailable or cleared; export important entries.
+Questions stay in the active page until you explicitly save them to this browser's journal. No account, analytics or cloud store. Exported files and AI briefs include the question and notes shown on screen; review them before sharing. Journal entries can be reopened, exported or deleted with undo. Browser storage can be unavailable or cleared; export important entries. Local journals belong to the exact browser address, including its port. When a fallback port changes, entries stay at the previous address; use export/import to carry readings between addresses, or use a fixed available --port for a consistent local journal.
 
 ## Limits and sources
 

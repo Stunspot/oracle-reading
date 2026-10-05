@@ -2,7 +2,7 @@
   "schema": "cd-product/v1",
   "id": "oracle-reading",
   "title": "Oracle Reading",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "MIT",
   "tier": "Free",
   "repository": "https://github.com/Stunspot/oracle-reading",
