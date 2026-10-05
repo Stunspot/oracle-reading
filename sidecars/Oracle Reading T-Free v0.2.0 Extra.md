@@ -14,15 +14,15 @@ Copy the .zip from Additional Files to your chosen harness or Chat project, atta
 
 # Changelog
 
-## v0.2.0 — 2026-10-05
+v0.2.0 - 2026-10-05
 
 The existing AI now conducts the reading and operates the accompanying visual table. Selene's performed expert consultation informs the operative practice. Added matching art for all 78 cards, four visual methods, staged reveal/focus, stable cast continuity, quiet/clear and self-contained inline/standalone display. Replaces the self-service studio; prior exported casts can be rendered.
 
-## v0.1.1 — 2026-10-05
+v0.1.1 - 2026-10-05
 
 Local launch opens the actual available address and refuses an explicitly occupied port.
 
-## v0.1.0 — 2026-10-05
+v0.1.0 - 2026-10-05
 
 Initial four-tradition skill and studio.
 
