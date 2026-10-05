@@ -1,13 +1,5 @@
-# Reading and runtime contract v1
+# Legacy v1 import compatibility
 
-Canonical record discriminator: schema=oracle-reading/v1; catalogVersion=0.1.0. id is an opaque string at most 80 characters; createdAt is an ISO date string; tradition is tarot/runes/iching/astrology; question ≤1500 characters; notes ≤4000. basis is digital-random, user-supplied, or illustrative. Runtime casts use digital-random; entered cards/lines/placements use user-supplied. Preserve these facts through save/export/import/deepening.
+This interface describes prior exported cast basis only. Current encounter and display are governed by table-contract.md.
 
-Tarot/runes results: ordered array of 1–10 unique catalog IDs; each has position (≤100 chars), reversed boolean (tarot only). I Ching results: six integer lines 6–9 bottom to top; derived figures and changes always recomputed, never trusted from import. Astrology: 1–10 known planet/sign pairs, optional house 1–12, houseKnown boolean, system and source (≤200 chars each); calculations are not supplied. User-entered data is reported as supplied, not independently verified. Unknown schema/catalog version and malformed inputs are rejected without replacing the current reading.
-
-Unknown fields are stripped before storage, export and AI brief generation; custom 1-10-symbol imported spreads retain every recorded position.
-
-Use browser Web Crypto with rejection sampling for unbiased bounded integers; shuffle/sample without replacement. Reversals use independent fair booleans when enabled. Python uses secrets.SystemRandom. Three fair coins tails=2/heads=3 per I Ching line; odd solid, even broken; flip 6/9 only. Primary/related hexagrams use bottom-to-top bits in catalog.json. Test all 64 against independent Unicode top/bottom trigram names and fixed cases 11,12,1→2,2→1 and mixed changes.
-
-The journal uses a namespaced localStorage key on explicit Save only. Loading/importing a reading does not save it. A storage/parse/quota failure announces the loss of persistence while retaining the active reading; exports remain available. Delete offers one-step undo. No accounts, analytics, cookies, server storage, remote fonts or automatic network calls. Export includes the selected question/notes; the user reviews the visible record before exporting or copying to AI. Imported strings render as text, not HTML. File imports ≤100 KB.
-
-Supported local origin: Python 3.10+ serves the extracted complete package at 127.0.0.1:8765 via serve.py, opened in a modern browser. Native modules require HTTP; file: displays actionable launch instructions. The server serves only the product tree, denies traversal and binds loopback. Closing its terminal stops it. No third-party dependencies. Core casts need no internet after local launch; AI deepening is a manual export/copy handoff. Public static hosting can serve the same tree unchanged.
+schema=oracle-reading/v1; catalogVersion=0.1.0; id; tradition; question; basis. Tarot/runes results are ordered catalog IDs with position and reversed flag. I Ching results is the six totals bottom to top. Astrology results are supplied planet/sign pairs with houseKnown/house/source/system. The renderer converts valid old casts into revision1 with symbols revealed. Browser journal data and notes are not automatically migrated or promoted into commitments.

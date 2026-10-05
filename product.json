@@ -2,7 +2,7 @@
   "schema": "cd-product/v1",
   "id": "oracle-reading",
   "title": "Oracle Reading",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "license": "MIT",
   "tier": "Free",
   "repository": "https://github.com/Stunspot/oracle-reading",
@@ -16,7 +16,7 @@
     }
   ],
   "distributions": [
-    "complete-webapp-and-skill",
+    "complete-ai-table-and-skill",
     "standalone-skill"
   ],
   "plugin_disposition": "deliberately_deferred"

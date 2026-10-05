@@ -28,12 +28,10 @@ for vals in ([7]*5,[7]*7,[7,7,7,8,8,10],[7,7,7,8,8,True]):
 freq={i:0 for i in (6,7,8,9)}
 for coins in itertools.product((2,3),repeat=3):freq[sum(coins)]+=1
 assert freq=={6:1,7:3,8:3,9:1}
-mirror=(ROOT/'web/catalog.js').read_text(encoding='utf-8')
-assert json.loads(mirror.removeprefix('export const catalog = ').strip().removesuffix(';'))==c
 skill=(ROOT/'skills/oracle-reading/SKILL.md').read_text(encoding='utf-8')
 yaml=(ROOT/'skills/oracle-reading/agents/openai.yaml').read_text(encoding='utf-8')
 description=re.search(r'^description: "(.*)"$',skill,re.M)[1]
 assert f'short_description: "{description}"' in yaml
 assert not re.search(r'[A-Z]:[\\/]',skill)
-assert (ROOT/'skills/oracle-reading/references/record-contract.md').read_bytes()==(ROOT/'docs/CONTRACT.md').read_bytes()
-print('PASS: catalog, independently anchored 64 figures, all 4096 line combinations, coin probabilities, invalid inputs, metadata and mirror parity.')
+assert (ROOT/'skills/oracle-reading/references/table-contract.md').is_file()
+print('PASS: catalog, independently anchored 64 figures, all 4096 line combinations, coin probabilities, invalid inputs, metadata parity.')
