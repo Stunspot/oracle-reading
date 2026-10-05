@@ -16,5 +16,6 @@ jobs:
         with:
           node-version: '22'
       - run: python -B tests/check.py
-      - run: node tests/engine.mjs
+      - run: python -B tests/table.py
+      - run: node tests/table.mjs
       - run: python -B tests/launch.py
