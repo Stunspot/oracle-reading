@@ -1,46 +1,47 @@
 # Oracle Reading
 
-**Tarot, astrology, runes, and I Ching readings—for people and their AI assistants.**
+Give your AI the craft of tarot, astrology, runes and the I Ching—and a table it can lay beside your conversation.
 
-A free reading studio and a complete assistant skill. Draw cards or runes, cast the I Ching, or explore known chart placements. See the exact basis, read original symbolism, keep an optional private journal, and bring the same reading into Nova or another assistant for deeper interpretation.
+Start by speaking naturally: **"Everything is shifting. Help me make sense of this transition."** Your AI listens, finds the question with you, chooses the practice, and reveals the symbols when they matter. Selene Astra's working craft informs reception, symbolic synthesis and the rhythm of the encounter. The table holds what you are looking at together.
 
-## Open the studio
+## Give your AI the skill
 
-[Open Oracle Reading in your browser](https://stunspot.github.io/oracle-reading/), or download it for local use.
+Download the complete release or standalone skill ZIP from [GitHub releases](https://github.com/Stunspot/oracle-reading/releases). Attach it to your supported harness or project and say **"Install this Augment."** For manual installation, copy skills/oracle-reading into your harness's skill directory. Host installation support varies.
 
-Download and extract the complete release ZIP. On Windows, double-click **Launch Oracle Reading.cmd** with Python 3.10+ installed. Keep its terminal open. On any platform:
+Try **"Use Oracle Reading. Lay a three-card reading with me."** You can also bring physical cards/runes, six I Ching totals bottom to top, or chart notes.
+
+## The AI operates the table
+
+The skill includes exact casting support and a renderer. Your existing AI is the reader. It writes a small reading state, calls the renderer and shows the result through your host's artifact mechanism. There is no separate chatbot, subscription, inference endpoint or provider setup.
 
 ```sh
-python serve.py
+python skills/oracle-reading/scripts/show.py skills/oracle-reading/examples/tables/tarot.json --output reading.html
 ```
 
-Open the exact address printed in the terminal. The launcher opens it for you. The server prefers port 8765 and selects an available port when it is occupied. Use --port only when you want a specific port. Use `python3` if that is your Python command. Native browser modules require this HTTP launch; opening index.html directly gives launch guidance. The studio has no external dependencies or model subscription and works without internet through its local server.
+Open the generated HTML directly. Python 3.10+ is needed to generate it; the file itself needs only a browser. Native inline rendering is available where the host supports it. The skill guides the AI through both paths, cast continuity and displayed-state checks.
 
-## Give your assistant the skill
+[The public table](https://stunspot.github.io/oracle-reading/) accepts AI-generated reading links. On its own it waits for the conversation. Your AI can produce a link with show.py --url when you want a browser/shareable display. Local/inline is preferable for private questions: URL fragments can remain in browser history and copied links.
 
-Copy **skills/oracle-reading** into your harness's skill directory, or attach the complete ZIP in a supported assistant project and ask **“Install this Augment.”** All runtime references and the optional Python helper are inside that skill folder. Installation support varies by host. Try: **“Use Oracle Reading. Help me understand a work transition through a three-card reading.”**
+## Included practice
 
-## What you can do
-
-| Method | Included |
+| Method | Shared visual |
 |---|---|
-| Tarot | 78 RWS-style cards, one/three-card spreads, optional reversals, physical draws |
-| Runes | 24 Elder Futhark characters, one/three-rune spreads, modern reflective meanings |
-| I Ching | Fair three-coin casts or physical totals, 64 King Wen figures, exact changing lines and related figure |
-| Astrology | Symbolic interpretation of supplied planet/sign/known-house placements; no chart calculations |
+| Tarot | Matching images for all 78 Rider-Waite-Smith cards, positions, orientation and deliberate reveal |
+| Runes | 24 Elder Futhark glyphs, names and cast positions |
+| I Ching | 64 King Wen figures, exact six-line casts, changing lines and related figure |
+| Astrology |Known planets/signs/houses and supplied relationships, with dense contextual interpretation |
 
-The studio provides original symbol commentary and reflection prompts. **Deepen with AI** copies a complete brief for your chosen assistant; no model runs secretly in the app. The installable skill supplies conversational synthesis, context and tradition-specific craft.
+The host AI owns meaning, questions and synthesis. Exact scripts own randomness, arithmetic and stable cast validation. The table never substitutes catalog keywords for the encounter. Astrology uses actual supplied/verified data; no natal or current-sky calculator is included. Traditional I Ching line passages use your chosen translation.
 
-## Private by choice
+## Privacy and continuity
 
-Questions stay in the active page until you explicitly save them to this browser's journal. No account, analytics or cloud store. Exported files and AI briefs include the question and notes shown on screen; review them before sharing. Journal entries can be reopened, exported or deleted with undo. Browser storage can be unavailable or cleared; export important entries. Local journals belong to the exact browser address, including its port. When a fallback port changes, entries stay at the previous address; use export/import to carry readings between addresses, or use a fixed available --port for a consistent local journal.
+No automatic journal, analytics, account or cloud record store. The AI uses files in your chosen workspace and persists/shares only at your requested scope. Revealing and focusing preserve the same cast. Quiet hides the table while you speak; clear creates a display with no personal payload. Earlier retained files remain yours to keep or delete.
 
-## Limits and sources
+Old oracle-reading/v1 exported records can be rendered as existing cast basis; browser journal data is not automatically migrated. Prior releases remain available. Version 0.2.0 replaces the earlier self-service studio with the AI-operated table.
 
-Respectful spiritual practice and honest interpretation go together. Readings invite meaning and agency; they do not establish medical facts, hidden private thoughts or guaranteed future events. Current astrology needs verified chart/ephemeris data. Detailed classical I Ching work uses your chosen translation. Rune meanings are modern practice, not a reconstructed universal ancient rite.
+## Sources and development
 
-See [Provenance](PROVENANCE.md), [Reading contract](docs/CONTRACT.md) and the tradition references in the skill. Original code/text: MIT. Created by **stunspot / Collaborative Dynamics**.
+Created by stunspot / Collaborative Dynamics. The supplied Selene persona and knowledge base informed an actual multi-turn model-role expert consultation. Original sources remain private; named operative runtime prose is derived from that craft. See [Provenance](PROVENANCE.md) and [runtime contract](docs/CONTRACT.md).
 
-## Development
+Code and authored runtime text: MIT. Bundled historical tarot art: public domain, with individual sources in assets/cards/manifest.json within the skill. No dependency installation or frontend build step. Run python -B tests/check.py, python -B tests/table.py and node tests/table.mjs. Build archives with tools/package.py --extraction-root <realistic-destination>. [Issues](https://github.com/Stunspot/oracle-reading/issues).
 
-No build step or dependency installation. `python -B tests/check.py` checks catalog structure, independent figure mapping, casting fixtures and metadata parity. Run `node tests/engine.mjs` for the browser-domain engine checks. Structural tests do not establish accessibility conformance. Build both release archives with `python tools/package.py --extraction-root "C:/Users/you/Downloads/Oracle Reading"`. Support and corrections: [GitHub Issues](https://github.com/Stunspot/oracle-reading/issues).

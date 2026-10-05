@@ -6,7 +6,7 @@ Wands: initiative, vitality, creative will. Cups: emotional life and connection.
 
 One card gives a focus. Situation / tension / helpful response gives three lenses without fixing a future. Larger spreads require their named positions; Celtic Cross conventions vary. Read each card in its position, then pairs and the whole. Notice suits and repeated imagery only where they help the question.
 
-Agree on reversals; blocked, inward, excessive or reconsidered expression are possible lenses. The studio offers a blocked/inward reflection prompt, while an assistant can deepen it contextually. Death concerns ending/transition; the Devil attachment/constraint; the Tower disruption/exposure. None supplies medical or literal death knowledge.
+Agree on reversals; blocked, inward, excessive or reconsidered expression are possible lenses. Choose the reversal lens through the encounter and keep its convention stable. Death concerns ending/transition; the Devil attachment/constraint; the Tower disruption/exposure. None supplies medical or literal death knowledge.
 
 Preserve physical order and orientation. Clarify an ambiguous name. Reject duplicated cards from a single deck unless multiple decks were explicitly used. A custom oracle deck needs its own supplied meanings or a labelled visual interpretation.
 

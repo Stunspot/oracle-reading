@@ -1,6 +1,6 @@
 # Astrology
 
-Default to Western symbolic astrology when none is named; preserve the supplied tropical/sidereal zodiac and house system. Jyotisha, Chinese astrology and horary require their own conventions and sources. The studio interprets supplied placements; it calculates no natal chart, aspects, houses or transits.
+Default to Western symbolic astrology when none is named; preserve the supplied tropical/sidereal zodiac and house system. Jyotisha, Chinese astrology and horary require their own conventions and sources. The host AI interprets supplied placements through astrology-knowledge-base.md. The table displays known relationships; it calculates no natal chart, aspects, houses or transits.
 
 Planet = function; sign = style; house = arena; aspect = relationship. Sun identity/purpose; Moon feeling/habit; Mercury thought/communication; Venus value/connection; Mars assertion/action; Jupiter growth/meaning; Saturn boundaries/time; Uranus disruption/freedom; Neptune imagination/dissolution; Pluto power/transformation. Symbolic fields are not diagnoses or gender roles.
 

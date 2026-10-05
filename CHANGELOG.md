@@ -1,10 +1,14 @@
 # Changelog
 
-## v0.1.1 - 2026-10-05
+## 0.2.0 — 2026-10-05
 
-Collision-safe local launch: bind an exclusive loopback socket before opening the browser, select an available port when the default is occupied, and refuse an occupied explicitly requested port. Existing v0.1.0 source history remains available. The symbol catalog and reading format remain at catalog version 0.1.0.
+The existing AI now conducts the reading and operates a quiet accompanying table. Selene's performed expert consultation informs operative reception, symbolic synthesis and visual timing. Added matching art for all 78 cards, four visual methods, staged reveal/focus, canonical cast continuity, quiet/clear, self-contained inline/standalone output and AI-generated public table links. Replaces the self-service studio. Existing v1 casts can be rendered; journal storage is not automatically migrated.
 
+## 0.1.1 — 2026-10-05
+
+Exclusive local binding, available-port fallback and opening the actual bound address.
 
 ## 0.1.0 — 2026-10-05
 
-Initial free release: standalone four-tradition reading skill, responsive private reading studio, original 78-card/24-rune/64-figure catalog, exact digital casting, physical-input support, known-placement astrology, optional local journal, and complete AI brief export.
+Initial assistant skill and self-service studio. Superseded encounter frame.
+

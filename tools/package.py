@@ -17,19 +17,22 @@ def safe_name(name,extraction):
  assert len(final.encode('utf-16-le'))//2<=259, final
 def archive(target,entries,extraction):
  seen=set()
- with zipfile.ZipFile(target,'w',zipfile.ZIP_DEFLATED,compresslevel=9) as z:
+ for source,name in entries:
+  safe_name(name,extraction)
+  key=unicodedata.normalize('NFC',name).casefold()
+  assert key not in seen,name
+  seen.add(key)
+  assert source.is_file() and not source.is_symlink()
+ temporary=target.with_name(target.name+'.tmp')
+ with zipfile.ZipFile(temporary,'w',zipfile.ZIP_DEFLATED,compresslevel=9) as z:
   for source,name in sorted(entries,key=lambda x:x[1]):
-   safe_name(name,extraction)
-   key=unicodedata.normalize('NFC',name).casefold()
-   assert key not in seen,name
-   seen.add(key)
-   assert source.is_file() and not source.is_symlink()
    data=source.read_bytes()
    info=zipfile.ZipInfo(name,(2026,10,5,0,0,0));info.compress_type=zipfile.ZIP_DEFLATED;info.external_attr=0o100644<<16
    z.writestr(info,data)
- with zipfile.ZipFile(target) as z:
+ with zipfile.ZipFile(temporary) as z:
   assert z.testzip() is None
   for source,name in entries:assert hashlib.sha256(z.read(name)).hexdigest()==digest(source)
+ temporary.replace(target)
  return {'name':target.name,'bytes':target.stat().st_size,'sha256':digest(target),'members':len(entries),'tree':{name:digest(source) for source,name in entries}}
 def main():
  p=argparse.ArgumentParser(description=__doc__);p.add_argument('--output',type=Path,default=ROOT/'dist');p.add_argument('--extraction-root',type=Path,required=True);a=p.parse_args()
