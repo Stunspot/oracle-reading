@@ -1,0 +1,23 @@
+{
+  "schema": "cd-product/v1",
+  "id": "oracle-reading",
+  "title": "Oracle Reading",
+  "version": "0.1.0",
+  "license": "MIT",
+  "tier": "Free",
+  "repository": "https://github.com/Stunspot/oracle-reading",
+  "studio": "https://stunspot.github.io/oracle-reading/",
+  "skill_injections": [
+    {
+      "name": "oracle-reading",
+      "description": "🔮 Tarot, astrology, runes, and I Ching readings.",
+      "short_description": "🔮 Tarot, astrology, runes, and I Ching readings.",
+      "path": "skills/oracle-reading/SKILL.md"
+    }
+  ],
+  "distributions": [
+    "complete-webapp-and-skill",
+    "standalone-skill"
+  ],
+  "plugin_disposition": "deliberately_deferred"
+}

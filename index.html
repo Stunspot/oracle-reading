@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#19151d">
+<meta name="description" content="A private reading studio for tarot, astrology, runes and the I Ching. Explore a question, keep a journal, and deepen the reading with your AI.">
+<title>Oracle Reading — A reading for the question you carry</title>
+<link rel="icon" href="web/assets/reading-table.png"><link rel="stylesheet" href="web/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to reading studio</a>
+<header class="topbar">
+<a href="./" class="brand"><span class="brand-mark" aria-hidden="true">✦</span><span>Oracle Reading<small>by Collaborative Dynamics</small></span></a>
+<nav aria-label="Studio"><button type="button" data-view="studio" aria-current="page">Reading table</button><button type="button" data-view="library">Symbol library</button><button type="button" data-view="journal">Your journal</button></nav>
+</header>
+<main id="main">
+<section class="hero" aria-labelledby="hero-title">
+<div class="hero-copy"><p class="eyebrow">A QUESTION. A SYMBOL. A NEW PERSPECTIVE.</p><h1 id="hero-title">Make room for<br>a deeper reading.</h1><p>Bring the question you carry.<br>Let the symbols open a conversation.</p><a class="hero-link" href="#reading-form">Come to the table <span aria-hidden="true">↗</span></a></div>
+</section>
+<p id="status" class="status" role="status" aria-live="polite"></p>
+<section id="launch-help" hidden class="notice"><h2>Open the local studio</h2><p>Extract the complete package, then double-click <strong>Launch Oracle Reading.cmd</strong> on Windows, or run <code>python serve.py</code> from its folder. Python 3.10+ is required. Open <strong>http://127.0.0.1:8765</strong> and keep the terminal open.</p></section>
+<section id="studio-view" class="view">
+<div class="section-heading"><div><p class="eyebrow">YOUR READING TABLE</p><h2>Where would you like to begin?</h2></div><p>Four traditions. Your own way in.</p></div>
+<div class="methods" aria-label="Choose a reading tradition">
+<button type="button" data-method="tarot" aria-pressed="true"><span aria-hidden="true">✦</span><strong>Tarot</strong><small>A story in the cards</small></button>
+<button type="button" data-method="astrology" aria-pressed="false"><span aria-hidden="true">☉</span><strong>Astrology</strong><small>The language of your chart</small></button>
+<button type="button" data-method="runes" aria-pressed="false"><span aria-hidden="true">ᚷ</span><strong>Runes</strong><small>A single sign, many paths</small></button>
+<button type="button" data-method="iching" aria-pressed="false"><span aria-hidden="true">䷊</span><strong>I Ching</strong><small>Wisdom in changing conditions</small></button>
+</div>
+<div class="studio-grid">
+<form id="reading-form" class="panel consultation" novalidate>
+<p id="method-label" class="eyebrow">TAROT · RIDER–WAITE–SMITH STYLE</p><h3>A question worth holding.</h3>
+<label for="question">Your question <span class="optional">(optional)</span></label>
+<textarea id="question" maxlength="1500" rows="3" placeholder="What should I understand about this transition?"></textarea>
+<p class="hint">An open question leaves room for insight—and for your choices.</p>
+<div id="settings"></div>
+<p id="form-error" class="error" role="alert" hidden></p>
+<button class="primary" id="cast" type="submit">Draw the cards <span aria-hidden="true">✦</span></button>
+<p class="footnote" id="basis-help">A random digital draw, without replacement. Or enter cards from your own deck.</p>
+</form>
+<section id="reading" class="panel reading" aria-labelledby="reading-title">
+<div class="empty-reading"><span class="empty-mark" aria-hidden="true">✦</span><p class="eyebrow">A MOMENT BEFORE THE READING</p><h3 id="reading-title" tabindex="-1">Your question comes first.</h3><p>Choose a tradition and bring a question.<br>The reading will unfold here.</p><div class="empty-rule"></div><p class="footnote">The symbols offer a perspective.<br>What you make of it remains yours.</p></div>
+</section>
+</div>
+</section>
+<section id="library-view" class="view" hidden>
+<div class="section-heading"><div><p class="eyebrow">LEARN THE LANGUAGE</p><h2>The symbol library</h2></div><p>Original meanings. Room for your interpretation.</p></div>
+<div class="library-controls"><div><label for="library-method">Tradition</label><select id="library-method"><option value="tarot">Tarot · 78 cards</option><option value="runes">Runes · 24 characters</option><option value="iching">I Ching · 64 figures</option><option value="astrology">Astrology · planets and signs</option></select></div><div><label for="search">Find a symbol or theme</label><input id="search" type="search" placeholder="Try The Star, clarity, or stillness"></div></div>
+<p id="library-count" class="hint" role="status"></p><div id="library-list" class="library-grid"></div>
+</section>
+<section id="journal-view" class="view" hidden>
+<div class="section-heading"><div><p class="eyebrow">A THREAD YOU CAN RETURN TO</p><h2>Your reading journal</h2></div><p>Saved only in this browser, when you choose.</p></div>
+<div class="journal-tools"><label class="file-button" for="import">Import a reading<input type="file" id="import" accept=".json,application/json"></label><button id="undo" type="button" hidden>Undo last deletion</button></div>
+<div id="journal-list"></div>
+</section>
+</main>
+<footer><p>Oracle Reading <span>·</span> Made by stunspot / Collaborative Dynamics</p><p>Free. No account. No automatic sharing. <a href="README.md">Guide &amp; sources</a> <a href="https://github.com/Stunspot/oracle-reading">GitHub</a></p></footer>
+<script>if(location.protocol==='file:'){document.getElementById('launch-help').hidden=false;document.getElementById('studio-view').hidden=true;}window.addEventListener('error',function(e){if(e.target&&e.target.tagName==='SCRIPT'){document.getElementById('status').textContent='The studio could not load. Check that the complete package is extracted and launch it with python serve.py.';}},true);</script>
+<script type="module" src="web/app.js"></script>
+</body></html>
