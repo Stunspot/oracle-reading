@@ -14,6 +14,8 @@ Copy the .zip from Additional Files to your chosen harness or Chat project, atta
 
 # Changelog
 
+Presentation edit, 2026-10-05: original Bloomfield LANTERN CONVERSATION Label. Included in Nova Free 3.8.0 and Nova Emergent 1.11.0; reading behavior remains 0.2.0.
+
 v0.2.0 - 2026-10-05
 
 Presentation repair: unrevealed tarot cards show a decorated card back while awaiting the AI’s reveal.
