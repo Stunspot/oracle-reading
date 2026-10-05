@@ -14,6 +14,11 @@ Copy the .zip from Additional Files to your chosen harness or Chat project, atta
 
 # Changelog
 
+## v0.1.1 - 2026-10-05
+
+The local launcher now opens the actual bound address and chooses an available port when the default is occupied, so another local app cannot receive the reading request. Explicit occupied ports are refused.
+
+
 ## v0.1.0 — 2026-10-05
 
 Initial free release: four-tradition assistant skill, responsive reading studio, exact digital casting and physical input, original symbol catalog, optional local journal, and AI brief export.

@@ -1,6 +1,6 @@
 # Oracle Reading — Installation
 
-Attach **Oracle Reading v0.1.0.zip** to your chosen assistant or project and say **“Install this Augment.”**
+Attach **Oracle Reading v0.1.1.zip** to your chosen assistant or project and say **“Install this Augment.”**
 
 ```text
 Install Oracle Reading from the attached complete archive. Inspect its README and skills/oracle-reading/SKILL.md. Install the self-contained oracle-reading folder through this host's supported skill mechanism. Preserve the caller's existing identity, instructions and authority. Keep the complete reading studio in a user-chosen workspace outside the installed skill directory; follow its localhost launch guide when requested. Report the actual installed location and any host support boundary. Then offer a short reading using a clear, honest cast basis.
