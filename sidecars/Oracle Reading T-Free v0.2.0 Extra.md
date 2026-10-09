@@ -4,7 +4,7 @@ Oracle Reading gives your AI the craft of tarot, astrology, runes and the I Chin
 
 # Usage Notes
 
-Copy the .zip from Additional Files to your chosen harness or Chat project, attach or reference it in chat, and say, **“Install this Augment.”**
+Copy the .zip from Additional Files to your chosen harness or Chat project, attach or reference it in chat, and say, **“Install this Augment.”** The prompt in this post is optional.
 
 - Start by speaking about your question, or bring physical cards/runes, six I Ching totals bottom to top, or known chart notes.
 - Your AI operates the table through your host's supported inline or artifact display. Generated standalone HTML opens directly.
@@ -13,6 +13,8 @@ Copy the .zip from Additional Files to your chosen harness or Chat project, atta
 - Astrology uses supplied or verified chart data and does not calculate the current sky. Detailed classical I Ching work uses your chosen actual translation; rune associations describe modern practice.
 
 # Changelog
+
+Maintenance edit, 2026-10-09: clarifies that the post prompt is optional. Reading behavior remains v0.2.0.
 
 Presentation edit, 2026-10-05: original Bloomfield LANTERN CONVERSATION Label. Included in Nova Free 3.8.0 and Nova Emergent 1.11.0; reading behavior remains 0.2.0.
 
