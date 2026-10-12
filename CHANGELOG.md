@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.1 — 2026-10-12
+
+Distinct installable update carrying the accepted reading/table/native-icon repair. Current complete and standalone package identities and provenance version advance together; all operative code, Selene practice and artwork remain unchanged. Prior evidence retains its original scope.
+
 ## 0.2.0 — 2026-10-05
 
 2026-10-12 presentation repair: recognizable browser/self-contained reading icons and native entry bindings for the existing table; cosmetic failures preserve launch/rendering. Native macOS execution remains unverified.

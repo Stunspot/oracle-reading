@@ -49,3 +49,7 @@ Code and authored runtime text: MIT. Bundled historical tarot art: public domain
 ## Table entry icons
 
 The public/local table and standalone reading HTML use the product icon. Standalone icons are embedded; saved readings keep working without the installation. The complete kit's Windows launcher refreshes adjacent `Launch Oracle Reading.lnk` with its ICO; use that shortcut and rerun the command after moving the folder. Its macOS `Launch Oracle Reading.command` applies the bundled ICNS and then opens the existing loopback table. Native icon failure leaves ordinary launch and reading output usable. Native macOS execution has not been observed on the Windows repair host.
+
+## Current release0.2.1
+
+Version0.2.1 provides a distinct installable update of the accepted reading/table and native-icon repair. Current package and standalone archive identities agree; operative Selene practice, exact casting, display code, privacy/continuity and78cardart are unchanged. Original observations retain their cutoffs. Native macOS/fresh interactive browser/model efficacy bounds remain.

@@ -16,3 +16,9 @@
 *.icns binary
 *.webp binary
 *.mp4 binary
+
+# Preserve sealed current delivery bodies.
+/release-candidates/v0.2.1/** -text
+/release-v0.2.1/** -text
+/delivery-v0.2.1/** -text
+/dist/current-v0.2.1/** -text

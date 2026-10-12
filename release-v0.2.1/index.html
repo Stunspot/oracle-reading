@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="A quiet visual table for AI-led tarot, astrology, runes and I Ching readings.">
+<title>Oracle Reading</title>
+<link rel="icon" href="skills/oracle-reading/assets/oracle.ico" sizes="any">
+<link rel="apple-touch-icon" href="skills/oracle-reading/assets/oracle-icon.png">
+<link rel="stylesheet" href="skills/oracle-reading/assets/table.css">
+<style>
+:root{--background:#171526;--foreground:#f5eee2;--muted:#262236;--muted-foreground:#c9c0cb;--border:#655c70;--viz-series-1:#e6c889;color-scheme:dark}
+body{margin:0;background:var(--background);color:var(--foreground);font:18px/1.6 Georgia,serif}
+main{max-width:1000px;margin:auto;padding:40px 24px}
+header{margin-bottom:24px}header p{margin:0;color:var(--muted-foreground)}
+h1{font-size:1.1rem;font-weight:400;letter-spacing:.08em;margin:0 0 12px}h2{font-size:1.45rem;font-weight:400}
+.oracle-basis,.oracle-source,footer{font:14px/1.6 system-ui,sans-serif}
+footer{text-align:center;padding:24px}a{color:inherit}.welcome{max-width:520px;margin:60px auto;text-align:center}.welcome p{margin:12px 0}
+</style>
+<script src="web/resources.js" defer></script>
+<script src="skills/oracle-reading/assets/table.js" defer></script>
+<script src="web/app.js" defer></script>
+</head>
+<body>
+<main><header><h1>Oracle Reading</h1><p>A place to lay what we are looking at together.</p></header>
+<div id="reading-table" class="oracle-table" role="region" aria-label="Reading table">
+<div class="welcome"><p>Bring your question to your AI.</p><p>It will lay the symbols here as your conversation unfolds.</p></div>
+</div>
+<noscript><p>This table needs JavaScript to display a reading.</p></noscript>
+</main>
+<footer><a href="https://github.com/Stunspot/oracle-reading">Give your AI the skill</a> · <a href="skills/oracle-reading/assets/cards/manifest.json">Deck sources</a></footer>
+</body></html>
+
