@@ -13,5 +13,6 @@
 *.jpeg binary
 *.gif binary
 *.ico binary
+*.icns binary
 *.webp binary
 *.mp4 binary
