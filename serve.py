@@ -1,5 +1,5 @@
 """Serve only Oracle Reading on an exclusive loopback port."""
-import argparse, errno, http.server, mimetypes, socket, urllib.parse, webbrowser
+import argparse, errno, http.server, mimetypes, socket, sys, urllib.parse, webbrowser
 from pathlib import Path
 ROOT=Path(__file__).resolve().parent
 class Handler(http.server.SimpleHTTPRequestHandler):
@@ -34,6 +34,10 @@ if __name__=='__main__':
  a=p.parse_args()
  if a.port is not None and not 0<=a.port<=65535:p.error('Port must be between 0 and 65535.')
  mimetypes.add_type('text/javascript','.js')
+ mimetypes.add_type('image/x-icon','.ico')
+ sys.path.insert(0,str(ROOT/'skills/oracle-reading/scripts'))
+ from native_icons import bind_windows
+ if bind_windows(ROOT)['status']=='unavailable':print('Oracle icon binding unavailable; the table remains usable.',file=sys.stderr)
  try:server=make_server(a.port)
  except OSError as e:p.exit(1,'Oracle Reading could not bind this port. Try python serve.py without --port.\n')
  with server:

@@ -45,3 +45,7 @@ Created by stunspot / Collaborative Dynamics. The supplied Selene persona and kn
 
 Code and authored runtime text: MIT. Bundled historical tarot art: public domain, with individual sources in assets/cards/manifest.json within the skill. No dependency installation or frontend build step. Run python -B tests/check.py, python -B tests/table.py and node tests/table.mjs. Build archives with tools/package.py --extraction-root <realistic-destination>. [Issues](https://github.com/Stunspot/oracle-reading/issues).
 
+
+## Table entry icons
+
+The public/local table and standalone reading HTML use the product icon. Standalone icons are embedded; saved readings keep working without the installation. The complete kit's Windows launcher refreshes adjacent `Launch Oracle Reading.lnk` with its ICO; use that shortcut and rerun the command after moving the folder. Its macOS `Launch Oracle Reading.command` applies the bundled ICNS and then opens the existing loopback table. Native icon failure leaves ordinary launch and reading output usable. Native macOS execution has not been observed on the Windows repair host.

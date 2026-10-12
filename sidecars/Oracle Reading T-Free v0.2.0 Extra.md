@@ -14,6 +14,9 @@ Copy the .zip from Additional Files to your chosen harness or Chat project, atta
 
 # Changelog
 
+2026-10-12 — Same-version presentation repair: recognizable browser and self-contained reading icons, Windows shortcut and packaged macOS command/ICNS binding. Icon failures leave the table usable; native macOS execution remains unverified on the Windows repair host.
+
+
 Maintenance edit, 2026-10-09: clarifies that the post prompt is optional. Reading behavior remains v0.2.0.
 
 Presentation edit, 2026-10-05: original Bloomfield LANTERN CONVERSATION Label. Included in Nova Free 3.8.0 and Nova Emergent 1.11.0; reading behavior remains 0.2.0.

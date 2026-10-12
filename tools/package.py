@@ -3,7 +3,7 @@ import argparse, hashlib, json, unicodedata, zipfile
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 VERSION=(ROOT/'VERSION').read_text().strip()
-TOP=['index.html','serve.py','Launch Oracle Reading.cmd','README.md','LICENSE','VERSION','PROVENANCE.md','CHANGELOG.md','product.json','package.json']
+TOP=['index.html','serve.py','Launch Oracle Reading.cmd','Launch Oracle Reading.command','README.md','LICENSE','VERSION','PROVENANCE.md','CHANGELOG.md','product.json','package.json']
 FOLDERS=['web','docs','skills','tests','tools']
 def digest(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def safe_name(name,extraction):
@@ -27,7 +27,7 @@ def archive(target,entries,extraction):
  with zipfile.ZipFile(temporary,'w',zipfile.ZIP_DEFLATED,compresslevel=9) as z:
   for source,name in sorted(entries,key=lambda x:x[1]):
    data=source.read_bytes()
-   info=zipfile.ZipInfo(name,(2026,10,5,0,0,0));info.compress_type=zipfile.ZIP_DEFLATED;info.external_attr=0o100644<<16
+   info=zipfile.ZipInfo(name,(2026,10,5,0,0,0));info.compress_type=zipfile.ZIP_DEFLATED;info.external_attr=(0o100755 if name.endswith(".command") else 0o100644)<<16
    z.writestr(info,data)
  with zipfile.ZipFile(temporary) as z:
   assert z.testzip() is None
